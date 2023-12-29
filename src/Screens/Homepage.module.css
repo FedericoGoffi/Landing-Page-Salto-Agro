@@ -1,0 +1,45 @@
+.ImgFondoP {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.Titulo {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 2.9em;
+    font-weight: 1000;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+}
+
+.SubTitulo {
+  position: absolute;
+  top: 39%;
+  left:35%;
+  font-weight: 400;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  font-size: 2em;
+}
+
+@media (max-width : 800px) {
+
+  .Titulo {
+    top: 25%;
+    left: 40%;
+    font-size: 1.4em;
+    font-weight: 900;
+  }
+
+  .SubTitulo {
+    top: 35%;
+    left:40%;
+    font-weight: 400;
+    font-size: 0.7em;
+  }
+}

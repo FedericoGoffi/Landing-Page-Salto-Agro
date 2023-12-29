@@ -1,0 +1,28 @@
+.DirectBuying {
+    height: 100%;
+    width: 95%;
+    margin-left: 20px;
+    background-color: aquamarine;
+    border-radius: 60px;
+    margin-top: 50px;
+}
+
+.DirectBuying h2, h3 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.DirectBuying h2 {
+    padding-top: 30px;
+}
+
+.DirectBuying li, h4 {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.slide {
+    
+}

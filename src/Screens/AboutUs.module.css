@@ -1,0 +1,17 @@
+.Contenedor {
+  height: 50%;
+  width: 95%;
+  background-color: aqua;
+  margin-top: 20px;
+  margin-left: 25px;
+  border-radius: 60px;
+}
+
+
+.QuienesSomos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
