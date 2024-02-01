@@ -1,0 +1,113 @@
+  .Container {
+    position: relative;
+    text-align: center;
+    background-color: #F4F4F4;
+    margin: 0px;
+    padding-bottom: 40px;
+  }
+
+  .Container h2 {
+    color: rgb(250, 197, 3);
+    font-size: 2em;
+    font-weight: 1000px;
+    margin: 0px;
+    padding-top: 45px;
+    padding-bottom: 18px;
+  }
+  
+  .ImgContainer {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 40px;
+    margin: 20px;
+  }
+  
+  .ImgTexto {
+    width: 550px;
+    height: 275px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+
+  .BotonCatalogo {
+    height: 40px;
+    width: 185px;
+    border-radius: 15px;
+    color: white;
+    border-color: white;
+    background-color: transparent;
+    font-size: 1.1em;
+    transition: transform 0.3s;
+  }
+
+  .BotonCatalogo:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+    transform: scale(1.1);
+  }
+  
+  .TextOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    color: white;
+    transition: transform 0.3s;
+    margin: 0px;
+  }
+  
+  .TextOverlay h3, .TextOverlay p, .TextOverlay button {
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+  }
+
+  .TextOverlay h3 {
+    font-size: 1.5em;
+  }
+
+  .TextOverlay p {
+    font-size: 1.1em;
+  }
+  
+  .ImgContainer:hover .ImgTexto {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+  }
+  
+  .ImgContainer:hover .TextOverlay {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  @media (max-width: 480px) {
+    .Container h2 {
+      font-size: 1.5em;
+    }
+    
+    .ImgTexto {
+      width: 345px;
+      height: 215px;
+    }
+
+    .BotonCatalogo {
+      height: 35px;
+      width: 175px;
+      font-size: 1.1em;
+    }
+  
+    .BotonCatalogo:hover {
+      transform: scale(1.0.2);
+    }
+
+    .TextOverlay h3, .TextOverlay p, .TextOverlay button {
+      margin-bottom: 30px;
+    }
+
+    .TextOverlay h3 {
+      font-size: 1.3em;
+    }
+  
+    .TextOverlay p {
+      font-size: 0.9em;
+    }
+  }

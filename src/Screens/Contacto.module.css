@@ -1,0 +1,79 @@
+.ConteinerContacto {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #F4F4F4;
+    outline-width: 40px;
+    padding-top: 25px;
+    padding-bottom: 35px;
+    border-top: 2px solid rgb(250, 197, 3);
+  }
+  
+  .TextoContacto h3 {
+    font-size: 1.4em;
+    font-weight: 800;
+    color: rgb(250, 197, 3);
+  }
+  
+  .TextoContacto p {
+    font-size: .9em;
+    font-weight: 500;
+    color: gray;
+  }
+  
+  .BotonContacto {
+    display: flex;
+    transition: transform 0.3s;
+  }
+  
+  .BotonContacto button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #fcf75e;
+    border-color: rgb(250, 197, 3);
+  }
+  
+  .BotonContacto button span {
+    font-size: 1.1em;
+    font-weight: 700;
+    padding-left: 15px;
+  }
+  
+  .BotonContacto:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) and (min-width: 481px) {
+    .ConteinerContacto {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .TextoContacto p {
+      font-size: .8em;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .ConteinerContacto {
+      flex-direction: column;
+      outline-width: 40px;
+      padding-top: 25px;
+      padding-bottom: 35px;
+    }
+
+    .TextoContacto h3 {
+      font-size: 1.3em;
+      padding-left: 7px;
+    }
+
+    .TextoContacto p {
+      font-size: .8em;
+      padding-left: 7px;
+    }
+  }

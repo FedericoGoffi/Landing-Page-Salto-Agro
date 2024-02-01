@@ -1,10 +1,6 @@
 .Contenedor {
-  height: 50%;
-  width: 95%;
-  background-color: aqua;
-  margin-top: 20px;
-  margin-left: 25px;
-  border-radius: 60px;
+  background: #F4F4F4;
+  margin: 0px;
 }
 
 
@@ -13,5 +9,49 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 10px;
+  padding: 10px;
+  margin: 0px;
+}
+
+.QuienesSomos h2 {
+  color: rgb(250, 197, 3);
+  font-size: 2em;
+  font-weight: 1000px;
+  margin: 0px;
+}
+
+.VerMas {
+  cursor: pointer;
+  display: inline-block;
+  color: rgb(250, 197, 3);
+  font-size: 1.1em;
+  font-weight: 700;
+  line-height: 2;
+  border: none;
+  background-color: transparent;
+  margin: 0px;
+}
+
+@media (max-width: 800px) and (min-width: 481px) {
+  .QuienesSomos h2 {
+    font-size: 1.6em;
+  }
+
+  .VerMas {
+    cursor: pointer;
+    display: inline-block;
+    color: rgb(250, 197, 3);
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 2;
+    border: none;
+    background-color: transparent;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .QuienesSomos h2 {
+    font-size: 1.2em;
+  }
 }

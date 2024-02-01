@@ -3,30 +3,28 @@
     width: 170px;
     margin-left: 20px;
     margin-top: 15px;
-}
-
-.MenuLogo {
+    margin-bottom: 10px;
+  }
+  
+  .MenuLogo {
     margin-right: 40px;
-    margin-top: 45px;
-    color: white;
-}
-
-.CloseLogo {
+    margin-top: 40px;
+    color: black;
+  }
+  
+  .CloseLogo {
     margin-top: 27px;
-    color: white;
-}
-
-.NavBar {
+    color: black;
+  }
+  
+  .NavBar {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
-    background: url(../Img/FondoPantalla.webp) no-repeat center;
-    background-size: cover;
-    min-height: 100vh;
-}
-
-.NavOpen {
+  }
+  
+  .NavOpen {
     display: flex;
     position: absolute;
     height: 100%;
@@ -34,56 +32,90 @@
     background-color: gray;
     flex-direction: column;
     align-items: center;
-}
-
-.NavLink {
+  }
+  
+  .NavLink {
     display: flex;
     font-size: 1.5em;
     font-weight: 400;
-    color: white;
+    color: black;
     margin-top: 40px;
-}
-
-li {
+  }
+  
+  li {
     display: inline-block;
   }
   
   a {
     text-decoration: none;
-    color: white;
+    color: black;
   }
-
-
-  @media (min-width : 800px) {
-    
+  
+  @media (min-width: 800px) {
     .NavBar {
-        justify-content: space-evenly;
-        height: 50%;
-        align-items: flex-start;
+      justify-content: space-between;
+      height: 50%;
+      align-items: flex-start;
     }
-
+  
     .LinksConteiner {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        margin-top: 0px;
-        margin-bottom: 40px;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin-top: 0px;
+      margin-bottom: 40px;
     }
-
+  
     li {
-        margin-right: 30px;
-      }
-
-      a:active {
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-      }
-
+      margin-right: 30px;
+    }
+  
+    a:active {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  
     .NavLink {
-        font-size: 1.1em;
-        font-weight: 500;
+      position: relative;
+      font-size: 1em;
+      font-weight: 500;
     }
 
+    .NavLink:before,
+    .NavLink:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      background-color: rgb(250, 197, 3);
+      transition: width 0.3s;
+    }
+
+    .NavLink:before {
+      right: 50%;
+    }
+    
+    .NavLink:after {
+      left: 50%;
+    }
+
+    .NavLink:hover:before,
+    .NavLink:focus:before,
+    .NavLink:hover:after,
+    .NavLink:focus:after {
+      width: 50%;
+    }
+  
     .NavLink:hover {
-        cursor: pointer;
+      cursor: pointer;
+    }
+  
+    .Scrolled {
+        position: fixed;
+        background: white;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
     }
   }
+  
