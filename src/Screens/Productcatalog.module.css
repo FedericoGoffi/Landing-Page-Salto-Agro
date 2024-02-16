@@ -20,7 +20,9 @@
     overflow: hidden;
     display: inline-block;
     border-radius: 40px;
-    margin: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
   
   .ImgTexto {
@@ -48,7 +50,7 @@
   
   .TextOverlay {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     text-align: center;
@@ -72,21 +74,33 @@
   
   .ImgContainer:hover .ImgTexto {
     transform: scale(1.1);
-    filter: brightness(0.8);
+    filter: brightness(0.4);
   }
   
   .ImgContainer:hover .TextOverlay {
     transform: translate(-50%, -50%) scale(1.1);
   }
 
+  @media (max-width: 800px) and (min-width: 480px) {
+    .ImgContainer {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  }
+
   @media (max-width: 480px) {
     .Container h2 {
-      font-size: 1.5em;
+      font-size: 1.4em;
+    }
+
+    .ImgContainer {
+      margin-right: 0px;
+      margin-left: 0px;
     }
     
     .ImgTexto {
-      width: 345px;
-      height: 215px;
+      width: 335px;
+      height: 200px;
     }
 
     .BotonCatalogo {
@@ -96,15 +110,15 @@
     }
   
     .BotonCatalogo:hover {
-      transform: scale(1.0.2);
+      transform: scale(1.2);
     }
 
     .TextOverlay h3, .TextOverlay p, .TextOverlay button {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     .TextOverlay h3 {
-      font-size: 1.3em;
+      font-size: 1.25em;
     }
   
     .TextOverlay p {

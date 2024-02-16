@@ -1,199 +1,574 @@
-.Conteiner {
-    background-color: #F4F4F4;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Container {
+  background-color: #F4F4F4;
 }
 
 .Contact {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-}
-
-.ImgFondo {
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 1;
+  position: relative;
+  background: url(../Img/ContactoFondo.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #000;
 }
 
 .H2Contact {
-    position: absolute;
-    top: 30%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    color: white;
-    font-size: 1.6em;
+  width: 100%;
+  height: 42em;
+  padding-top: 230px;
+  text-align: center;
+  color: white;
+  }
+
+  .H2Contact h2 {
+    font-size: 2.4em;
+    padding-left: 18px;
+  }
+
+.WavyTransitions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.WavySvg {
+  height: 100%;
+  width: 100%;
+}
+
+.WavyPath {
+  stroke: none;
+  fill: #F4F4F4;
 }
 
 .TCU {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
 }
 
 .ContactItem {
-    display: flex;
-    align-items: center;
-    height: 90px;
-    width: 290px;
-    background-color: white;
-    border: 2px solid rgb(250, 197, 3);
-    border-radius: 15px;
-    margin-bottom: 10px;
-    transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: 290px;
+  background-color: white;
+  border: 2px solid rgb(250, 197, 3);
+  border-radius: 15px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .ContactItem svg {
-    margin-right: 0px;
-    margin-left: 25px;
-    height: 45px;
-    width: 45px;
-    color: rgb(250, 197, 3);
-    background-color: transparent;
-    padding: 10px;
-    box-sizing: content-box;
+  margin-left: 15px;
+  height: 60px;
+  width: 60px;
+  color: rgb(250, 197, 3);
+  padding: 10px;
 }
 
 .ContactText {
-    flex-grow: 1;
-    text-align: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .ContactText h3 {
-    color: #1c1c1c;
+  color: #1c1c1c;
 }
 
 .ContactItem:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.DivNA {
-    display: flex;
-    list-style: none;
-    justify-content: flex-end;
+.Conteiner_2 {
+  display: flex;
+  position: relative;
+  background-color: #F4F4F4;
 }
 
-.DivCA {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+.Formulario {
+  width: 50%;
+  padding: 20px;
 }
 
-.DivMen {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
+.ImgSaltoLocal {
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 100px 100px 150px;
+}
+
+.InfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.UlContacto h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding-top: 17px;
+  border-bottom: 2px solid rgb(250, 197, 3);
+  margin-bottom: 20px;
+}
+
+.InfoIcon {
+  font-size: 1.7em;
+  transition: .3s;
+}
+
+.InfoIcon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.FormularioContacto {
+  position: absolute;
+  top: 55%;
+  left: 27%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+}
+
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+}
+
+.ModalContent {
+  background: #F4F4F4;
+  padding: 20px;
+  border-radius: 25px;
+  z-index: 1100;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.Pasos_Compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.Pasos_Compra h2 {
+ color: rgb(250, 197, 3);
+ border-bottom: 2px solid rgb(250, 197, 3);
+ margin-top: 10px;
+ margin-bottom: 25px;
+}
+
+.IconClose {
+  font-size: 1.4em;
+  padding-top: 20px;
+  transition: .3s;
+}
+
+.IconClose:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.InfoContainer:hover .Pasos_Compra {
+  visibility: visible;
+  opacity: 1;
+}
+
+.Pasos_Compra p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .LabelC {
-    display: block;
-    text-align: left;
-    margin-left: 7px;
-    padding-top: 50px;
-    font-size: 1.2em;
-    font-weight: 600;
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
-.InputNA {
-    display: inline-block;
-    height: 30px;
-    width: 180px;
-    margin-top: 5px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border-color: rgb(250, 197, 3);
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-.InputCA {
-    display: block;
-    height: 30px;
-    width: 418px;
-    margin-top: 5px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border-color: rgb(250, 197, 3);
-    font-size: 1.1em;
-    font-weight: 500;
+.InputNA,
+.InputCA,
+.TextAreaMensaje {
+  height: 30px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 2px solid rgb(250, 197, 3);
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .TextAreaMensaje {
-    resize: none;
-    height: 100px;
-    width: 418px;
-    margin-top: 5px;
-    margin-right: 20px;
-    border-radius: 5px;
-    border-color: rgb(250, 197, 3);
-    font-size: 1.3em;
-    font-weight: 600;
+  height: 150px;
+  width: 480px;
+  resize: none;
+}
+
+.DivMen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.DivCA {
+  display: flex;
+  flex-direction: column;
 }
 
 .ButtonContacto {
-    height: 35px;
-    width: 150px;
-    border-radius: 10px;
-    margin-top: 25px;
-    margin-right: 220px;
-    font-size: 1.1em;
-    font-weight: 600;
-    background-color: white;
-    border-color: rgb(250, 197, 3);
-    transition: transform 0.3s;
+  height: 40px;
+  width: 125px;
+  margin-top: 15px;
+  font-size: 1em;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+  border: 2px solid rgb(250, 197, 3);
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .ButtonContacto:hover {
-    cursor: pointer;
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.WavyTransitions {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    z-index: 0;
+.cargando { 
+  position: relative; 
+  color: rgb(250, 197, 3);
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contenedor_loader {  
+  height: 6em;
+}
+
+.contenedor { 
+  background-color: white; 
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  color: #000;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: rgb(250, 197, 3);
+  animation: cargando 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+.loader:before {
+  left: -1.5em;
+}
+
+.loader {
+  text-indent: -9999em;
+  margin: 40% auto;
+  position: relative;
+  font-size: 11px;
+  animation-delay: 0.16s;
+}
+
+.loader:after {
+  left: 1.5em;
+  animation-delay: 0.32s;
+}
+
+@keyframes cargando {
+  0%,
+  80%,
+  100% {
+      box-shadow: 0 0 rgb(250, 197, 3);
+      height: 4em;
   }
-  
-  .WavySvg {
-    height: 100%;
-    width: 100%;
+  40% {
+      box-shadow: 0 -2em rgb(250, 197, 3);
+      height: 5em;
   }
+}
+
+@media (max-width: 1023px) and (min-width: 700px) {
   
-  .WavyPath {
-    stroke: none;
-    fill: #F4F4F4;
+  .H2Contact {
+    width: 100%;
+    height: 40em;
+    padding-top: 220px;
+    text-align: center;
+    color: white;
+    }
+  
+    .H2Contact h2 {
+      font-size: 2.4em;
+      padding-left: 14px;
+    }
+
+  .ContactItem {
+    height: 65px;
+    width: 210px;
+    border-radius: 15px;
   }
 
-  .Conteiner_2 {
+  .ContactItem svg {
+    margin-left: 10px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+  }
+  
+  .ContactText {
+    flex-grow: 1;
+    text-align: center;
+    font-size: .8em;
+  }
+
+  .Formulario {
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+  }
+
+  .ImgSaltoLocal {
+    height: 420px;
+    margin: 100px 0px 150px 15px;
+  }
+
+  .FormularioContacto {
+    top: 55%;
+    left: 29%;
+    width:55%;
+    padding: 20px;
+  }
+
+  .InfoIcon {
+    font-size: 1.5em;
+    transition: .3s;
+  }
+
+  .LabelC {
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  .InputNA,
+  .InputCA,
+  .TextAreaMensaje {
+    height: 25px;
+    width: 85%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .DivNA {
     display: flex;
+    width: 96%;
+    padding-left: 16px;
+  }
+  
+  .TextAreaMensaje {
+    height: 70px;
+    width: 330px;
   }
 
-  .Pasos_Compra {
+  .ButtonContacto {
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: .9em;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 699px) and (min-width: 481px) {
+
+  .H2Contact {
+    width: 100%;
+    height: 38em;
+    padding-top: 210px;
+    text-align: center;
+    color: white;
+    }
+  
+    .H2Contact h2 {
+      font-size: 2em;
+      padding-left: 13px;
+    }
+
+  .TCU {
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .ContactItem {
+    height: 60px;
+    width: 165px;
+    border-radius: 15px;
+  }
+
+  .ContactItem svg {
+    margin-left: 5px;
+    height: 45px;
+    width: 45px;
+    padding: 7px;
+  }
+
+  .ContactText {
+    flex-grow: 1;
+    text-align: center;
+    font-size: .7em;
+  }
+
+  .Formulario {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto 40px auto;
+    order: 2;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+  }
+
+  .ImgSaltoLocal {
+    display: none;
+  }
+
+  .FormularioContacto {
+    display: contents;
+    left: 50%;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .DivNA {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .TextAreaMensaje {
+    height: 70px;
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .H2Contact {
+    width: 100%;
+    height: 38em;
+    padding-top: 220px;
+    text-align: center;
+    color: white;
+    }
+  
+    .H2Contact h2 {
+      font-size: 1.8em;
+      padding-left: 7px;
+    }
+
+  .TCU {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    padding-top: 45px;
-    padding-left: 20px;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .ContactItem {
+    margin-bottom: 20px;
+  }
+
+  .Formulario {
+    width: 90%;
+    max-width: 400px;
+    margin: 40px auto 40px auto;
+    order: 2;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+  }
+
+  .ImgSaltoLocal {
+    display: none;
+  }
+
+  .FormularioContacto {
+    display: contents;
+    left: 50%;
+    width: 90%;
+    padding: 20px;
+  }
+
+  
+  .ModalContent {
+    background: #F4F4F4;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 25px;
+    z-index: 1100;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
   }
 
   .Pasos_Compra h2 {
-    color: rgb(250, 197, 3);
-    font-size: 1.9em;
-    font-weight: 800;
-    border-bottom: 1px solid rgb(250, 197, 3);
+    font-size: 1.3em;
+   }
+   
+   .Pasos_Compra p {
+    font-size: .9em;
+  }
+  .DivNA {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0px;
   }
 
-  .Pasos_Compra p {
-    text-align: center;
-    font-size: 1.19em;
-    font-weight: 600;
+  .TextAreaMensaje {
+    height: 70px;
+    width: 300px;
   }
+}

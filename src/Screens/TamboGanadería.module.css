@@ -1,83 +1,217 @@
 .Container {
-    background-color: #F4F4F4;
-    margin: 0px;
-    padding: 0px;
-  }
+  background-color: #F4F4F4;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .Tambo_Ganaderia {
-    position: relative;
-  }
-
-  .ImgFondo {
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 1;
-  }
+.Tambo_Ganaderia {
+  position: relative;
+  background: url(../Img/TamboGanaderíaFondo.webp);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #000;
+}
 
 .H2Contact {
-    position: absolute;
-    top: 20%;
-    left: 15%;
+  width: 100%;
+  height: 43em;
+  padding-top: 200px;
+  text-align: center;
+  color: white;
+  }
+
+  .H2Contact h2 {
+    font-size: 2.4em;
+  }
+
+.WavyTransitions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.WavySvg {
+  height: 100%;
+  width: 100%;
+}
+
+.WavyPath {
+  stroke: none;
+  fill: #F4F4F4;
+}
+
+.sliderConteiner h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.sliderConteiner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.slide p {
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.slide p:before,
+.slide p:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: rgb(250, 197, 3);
+  transition: width 0.3s;
+}
+
+.slide p:before {
+  right: 50%;
+}
+
+.slide p:after {
+  left: 50%;
+}
+
+.slide p:hover:before,
+.slide p:focus:before,
+.slide p:hover:after,
+.slide p:focus:after {
+  width: 50%;
+}
+
+.VerMas {
+  display: inline-block;
+  width: 100%;
+  font-size: 1em;
+  line-height: 2;
+  border: none;
+  background-color: transparent;
+  margin: 0px;
+}
+
+.cargando { 
+  position: relative; 
+  color: rgb(250, 197, 3);
+  margin-top: 2em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contenedor_loader {  
+  height: 6em;
+}
+
+.contenedor { 
+  background-color: white; 
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  color: #000;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: rgb(250, 197, 3);
+  animation: cargando 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+.loader:before {
+  left: -1.5em;
+}
+
+.loader {
+  text-indent: -9999em;
+  margin: 40% auto;
+  position: relative;
+  font-size: 11px;
+  animation-delay: 0.16s;
+}
+
+.loader:after {
+  left: 1.5em;
+  animation-delay: 0.32s;
+}
+
+@keyframes cargando {
+  0%,
+  80%,
+  100% {
+      box-shadow: 0 0 rgb(250, 197, 3);
+      height: 4em;
+  }
+  40% {
+      box-shadow: 0 -2em rgb(250, 197, 3);
+      height: 5em;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 481px){
+
+  .H2Contact {
+    height: 40em;
+    padding-top: 240px;
     text-align: center;
-    font-size: 1.5em;
     color: white;
-    width: 70%; 
+    }
+  
+    .H2Contact h2 {
+      font-size: 2.4em;
+    }
+
+    .WavyTransitions {
+      height: 80px;
+    }
+
+}
+
+@media (max-width: 480px) {
+  
+  .H2Contact {
+    height: 40em;
+    padding-top: 240px;
+    text-align: center;
+    color: white;
+    }
+
+    .H2Contact h2 {
+      font-size: 2.4em;
+    }
+
+  .sliderConteiner {
+    display: block;
   }
 
-  .WavyTransitions {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    z-index: 0;
-  }
-  
-  .WavySvg {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .WavyPath {
-    stroke: none;
-    fill: #F4F4F4;
-  }
-
-  .sliderContainer h2 {
-    display: flex;
-    justify-content: center;
-  }
-
-  .sliderContainer {
-    display: flex;
-    justify-content: space-around;
-  }
-  
   .slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    background-color:white;
-    border: 2px solid rgb(250, 197, 3);
-    border-radius: 15px;
-    margin-top: 20px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    margin-bottom: 0px;
   }
-
-  .slide p {
-    font-size: 1.2em;
-    font-weight: 700;
-  }
-
-  .VerMas {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1em;
-    line-height: 2;
-    border: none;
-    background-color: transparent;
-    margin: 0px;
-  }
+}

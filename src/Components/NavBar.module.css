@@ -1,4 +1,41 @@
-.ImgLogo {
+.navBar {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  height: 85px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+  .navBar.navBarScroll {
+    padding: 0;
+    background: white;
+  }
+  
+  .navOpen {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #F4F4F4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .NavLink {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: black;
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .ImgLogo {
     height: 70px;
     width: 170px;
     margin-left: 20px;
@@ -8,38 +45,14 @@
   
   .MenuLogo {
     margin-right: 40px;
-    margin-top: 40px;
+    margin-top: 5px;
     color: black;
   }
   
   .CloseLogo {
-    margin-top: 27px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     color: black;
-  }
-  
-  .NavBar {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .NavOpen {
-    display: flex;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: gray;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .NavLink {
-    display: flex;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: black;
-    margin-top: 40px;
   }
   
   li {

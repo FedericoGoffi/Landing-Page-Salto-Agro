@@ -1,17 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Homepage.module.css';
-import Fondo from '../Img/FondoPantalla.webp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Homepage = () => {
+const Homepage = ({ onLoadingChange }) => {
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     AOS.init();
   }, []);
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="contenedor">
+        <div className="contenedor_loader">
+          <div className="loader"></div>
+        </div>
+        <div className="cargando">Cargando...</div>
+      </div>
+    );
+  }
+
   return (
-    <div className={styles.textoSobreImagen}>
+    <div className={styles.Container}>
       <div className={styles.textoContainer}>
         <h2 className={styles.Titulo}>SOLUCIONES PARA EL AGRO</h2>
         <p className={styles.SubTitulo}>
@@ -23,7 +42,6 @@ const Homepage = () => {
           <path className={styles.WavyPath} d="M-0.00,49.88 C150.00,149.67 271.39,-49.88 500.00,49.88 L500.00,150.00 L-0.00,150.00 Z"></path>
         </svg>
       </div>
-      <img src={Fondo} alt="Fondo de pantalla" className={styles.ImgFondoP} />
     </div>
   );
 };

@@ -3,6 +3,7 @@
     justify-content: space-around;
     align-items: center;
     border-top: 2px solid rgb(250, 197, 3);
+    padding: 15px 0 15px;
 }
 
 .IP {
@@ -20,9 +21,13 @@
     width: 200px;
 }
 
+.Container_2 {
+    display: flex;
+    align-items: center;
+}
+
 .TM {
-    margin: 0px;
-    padding: 0px;
+    padding-right: 80px;
 }
 
 .TM h2 {
@@ -69,6 +74,7 @@
     color: gray;
     border-top: 2px solid #F3F3F3;
     font-weight: 500;
+    padding: 10px 0 10px;
 }
 
 @media (max-width: 480px) {
@@ -78,7 +84,6 @@
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-
     }
 
     .ImgLogo {
@@ -95,12 +100,10 @@
         font-size: 0.9em;
         width: 50%;
     }
-    
-    .TM,
-    .Staff h2,
-    .Staff ul {
-        display: flex;
-        flex-direction: column;
+
+    .TM {
+        padding-right: 25px;
+        padding-left: 15px;
     }
 
 }

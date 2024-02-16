@@ -5,13 +5,23 @@ import Logo from '../Img/logo.webp';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+  const [color, setColor] = useState(false);
+
+  const ChangeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener('scroll', ChangeColor);
 
   const [NavBarOpen, setNavBarOpen] = useState(false);
   const [windowDimension, setWindowDimension] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const detectDimension = () => {
     setWindowDimension({
@@ -20,19 +30,13 @@ const NavBar = () => {
     });
   };
 
-  const handleScroll = () => {
-    setIsScrolled(window.scrollY > 0);
-  };
-
   useEffect(() => {
     window.addEventListener('resize', detectDimension);
-    window.addEventListener('scroll', handleScroll);
 
     windowDimension.width > 800 && setNavBarOpen(false);
 
     return () => {
       window.removeEventListener('resize', detectDimension);
-      window.removeEventListener('scroll', handleScroll);
     };
   }, [windowDimension]);
 
@@ -58,11 +62,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div
-      className={`${styles.NavBar} ${isScrolled ? styles.Scrolled : ''} ${
-        NavBarOpen ? styles.NavOpen : ''
-      }`}
-    >
+    <div className={`${styles.navBar} ${color ? styles.navBarScroll : ''} ${NavBarOpen ? styles.navOpen : ''}`}>
       {!NavBarOpen && (
         <Link to="/">
           <img className={styles.ImgLogo} src={Logo} alt="Logo Salto" />
@@ -87,14 +87,13 @@ const NavBar = () => {
         <ul className={styles.LinksConteiner}>
           {links.map((x) => (
             <li key={x.link} className={styles.NavLink}>
-              <a
-                href={x.link === 'Contáctanos' ? '/contact' : `/${x.link.toLowerCase()}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setNavBarOpen(false)}
-              >
-                {x.link === 'TamboGanadería' ? 'TamboGanadería' : x.link}
-              </a>
+            <a
+              href={x.url}
+              rel="noopener noreferrer"
+              onClick={() => setNavBarOpen(false)}
+            >
+              {x.link === 'Tambo-Ganadería' ? 'TamboGanadería' : x.link}
+            </a>
             </li>
           ))}
         </ul>
@@ -104,14 +103,15 @@ const NavBar = () => {
           {links.map((x) => (
             <li key={x.link} className={styles.NavLink}>
               {x.external ? (
-                <a
-                  href={x.url}
+                 
+                 <Link
+                  to={x.url}
+                  onClick={() => setNavBarOpen(false)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setNavBarOpen(false)}
-                >
-                  {x.link}
-                </a>
+                  >
+                 {x.link}
+               </Link>
               ) : (
                 <Link to={x.url} onClick={() => setNavBarOpen(false)}>
                   {x.link}
@@ -126,4 +126,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 

@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './AboutUs.module.css';
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const AboutUs = () => {
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   const [showMore, setShowMore] = useState(false);
 
@@ -37,7 +31,7 @@ const AboutUs = () => {
 
   return (
     <div className={styles.Contenedor}>
-      <div data-aos="fade-up" className={styles.QuienesSomos}>
+      <div className={styles.QuienesSomos}>
         <h2>QUIÉNES SOMOS:</h2>
         <pre style={preStyle}>{showMore ? longText : longText.split('\n\n')[0]}</pre>
         <button className={styles.VerMas} onClick={toggleShowMore}>
