@@ -4,6 +4,7 @@ import './App.css';
 import Homepage from './Screens/Homepage';
 import AboutUs from './Screens/AboutUs';
 import Productcatalog from './Screens/Productcatalog';
+import NewWebs from './Screens/newWebs';
 import Contact from './Screens/Contact';
 import NavBar from './Components/NavBar';
 import Contacto from './Screens/Contacto';
@@ -18,11 +19,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [specificRouteLoading, setSpecificRouteLoading] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [homeVisible, setHomeVisible] = useState(true);
-
-  const toggleHomeVisibility = () => {
-    setHomeVisible(!homeVisible);
-  };
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -66,12 +62,13 @@ function App() {
                 path="/"
                 element={
                   <React.Fragment>
-                    <NavBar setNavBarOpen={toggleHomeVisibility} setHomeVisible={setHomeVisible} />
-                    {homeVisible && <Homepage />}
-                    {homeVisible && <AboutUs />}
-                    {homeVisible && <Productcatalog />}
-                    {homeVisible && <Contacto />}
-                    {homeVisible && <Footer />}
+                    <NavBar/>
+                    <Homepage />
+                    <AboutUs />
+                    <Productcatalog />
+                    <NewWebs />
+                    <Contacto />
+                    <Footer />
                   </React.Fragment>
                 }
               />
@@ -79,9 +76,9 @@ function App() {
                 path="/Contactos"
                 element={
                   <React.Fragment>
-                    <NavBar setNavBarOpen={toggleHomeVisibility} setHomeVisible={setHomeVisible} />
-                    {homeVisible && <Contact onLoadingChange={handleSpecificRouteLoading} />}
-                    {homeVisible && <Footer />}
+                    <NavBar />
+                    <Contact onLoadingChange={handleSpecificRouteLoading} />
+                    <Footer />
                   </React.Fragment>
                 }
               />
@@ -89,9 +86,9 @@ function App() {
                 path="/Agronomía"
                 element={
                   <React.Fragment>
-                    <NavBar setNavBarOpen={toggleHomeVisibility} setHomeVisible={setHomeVisible} />
-                    {homeVisible && <Agronomy onLoadingChange={handleSpecificRouteLoading} />}
-                    {homeVisible && <Footer />}
+                    <NavBar />
+                    <Agronomy onLoadingChange={handleSpecificRouteLoading} />
+                    <Footer />
                   </React.Fragment>
                 }
               />
@@ -99,9 +96,9 @@ function App() {
                 path="/TamboGanadería"
                 element={
                   <React.Fragment>
-                    <NavBar setNavBarOpen={toggleHomeVisibility} setHomeVisible={setHomeVisible} />
-                    {homeVisible && <TamboGanadería onLoadingChange={handleSpecificRouteLoading} />}
-                    {homeVisible && <Footer />}
+                    <NavBar />
+                    <TamboGanadería onLoadingChange={handleSpecificRouteLoading} />
+                    <Footer />
                   </React.Fragment>
                 }
               />

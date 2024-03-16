@@ -25,7 +25,7 @@ const AboutUs = () => {
 
   const preStyle = {
     whiteSpace: 'pre-wrap',
-    fontSize: '1.3em', 
+    fontSize: '1.3em',
     color: 'dark',
   };
 

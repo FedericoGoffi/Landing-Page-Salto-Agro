@@ -81,11 +81,8 @@ const Tambo = ({ onLoadingChange }) => {
 <br />
 <br />
 <br />
-- ENLACE A FORMULARIO DE DESCARGA - OLE! 5.5:
-<br />
-<br />
-<br />
-- <a href="https://forms.gle/oVDk4Z5bDnFi751JA" target="_blank" rel="noopener noreferrer">https://forms.gle/oVDk4Z5bDnFi751JA</a>
+- ENLACE A HERRAMIENTA DE GESTIÓN DE EMPRESAS PRODUCTORAS DE LECHE:
+<a href="https://milecheria.ar" target="_blank" rel="noopener noreferrer">https://milecheria.ar</a>
 <br />
 <br />
 <br />

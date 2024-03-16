@@ -29,7 +29,7 @@ useEffect(() => {
   return (
     showButton && (
       <div className={styles.whatsapp_button} data-aos="fade-up">
-        <a href="https://wa.me/3496560133" rel="noreferrer" target="_blank">
+        <a href="https://wa.me/+5493496504081" rel="noreferrer" target="_blank">
           <img src={WhatsAppIcon} alt="WhatsApp" />
         </a>
       </div>

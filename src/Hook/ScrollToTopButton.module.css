@@ -4,3 +4,7 @@
     height: 50px;
     width: 50px;
 }
+
+.ScrollTop:hover {
+    cursor: pointer;
+}

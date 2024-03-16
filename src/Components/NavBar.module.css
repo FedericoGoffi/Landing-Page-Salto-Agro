@@ -54,6 +54,12 @@
     margin-bottom: 100px;
     color: black;
   }
+
+  body.menu-open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
   
   li {
     display: inline-block;

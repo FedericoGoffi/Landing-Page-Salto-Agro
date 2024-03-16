@@ -54,7 +54,7 @@ const Livestock = () => {
           <div className={styles.slide}>
             <p>Herramientas de gestión de empresas<br/>productoras de leche:</p>
             <ul>
-              <li>ENLACE A FORMULARIO DE DESCARGA - OLE! 5.5:</li>
+              <li>ENLACE A HERRAMIENTA:</li>
               <li><a className={styles.Formulario} href='https://forms.gle/oVDk4Z5bDnFi751JA'>https://forms.gle/oVDk4Z5bDnFi751JA</a></li>
             </ul>
           </div>

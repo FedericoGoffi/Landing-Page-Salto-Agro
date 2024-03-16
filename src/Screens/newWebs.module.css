@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    background-color: #F4F4F4;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container h2{
+    color: rgb(250, 197, 3);
+    font-size: 2em;
+    font-weight: 1000px;
+    padding-bottom: 15px;
+}
+
+.container h3 {
+    font-size: 1.05em;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+
+.container a {
+    color: rgb(250, 197, 3);
+    border-bottom: 2px solid rgb(250, 197, 3);
+    font-size: 1.2em;
+    font-weight: 1000;
+}

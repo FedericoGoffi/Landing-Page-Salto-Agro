@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FondoTexto1 from '../Img/Agronomía.webp';
-import FondoTexto2 from '../Img/TamboGanadería.webp';
+import FondoTexto2 from '../Img/TamboGanadería.jpg';
 import styles from './Productcatalog.module.css';
 
 const Productcatalog = () => {

@@ -3,7 +3,7 @@ import styles from './Homepage.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Homepage = ({ onLoadingChange }) => {
+const Homepage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

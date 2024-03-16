@@ -3,7 +3,6 @@ import styles from './Contact.module.css';
 import { FiPhoneCall } from 'react-icons/fi';
 import { IoMdMailUnread } from 'react-icons/io';
 import { BiWorld } from 'react-icons/bi';
-import SaltoLocal from '../Img/SaltoLocal.webp';
 import { IoIosInformationCircleOutline } from 'react-icons/io';
 import { IoClose } from "react-icons/io5";
 
@@ -35,6 +34,11 @@ const Contact = ({ onLoadingChange }) => {
   const redirigirAGoogleMaps = () => {
     window.location.href =
       'https://www.google.com/maps/place/SALTO+AGRO+S.S./@-31.3994458,-60.7497705,17z/data=!3m1!4b1!4m6!3m5!1s0x95b5131e7eb27e35:0x1f8b619bb0c77974!8m2!3d-31.3994458!4d-60.7471956!16s%2Fg%2F12m9l4_xd?entry=ttu';
+  };
+
+  const redirectToGmail = () => {
+    const gmailLink = 'mailto:panchocandioti@gmail.com';
+    window.location.href = gmailLink;
   };
 
   useEffect(() => {
@@ -79,11 +83,10 @@ const Contact = ({ onLoadingChange }) => {
           </div>
         </div>
 
-        <div className={styles.ContactItem}>
+        <div className={styles.ContactItem} onClick={redirectToGmail}>
           <IoMdMailUnread />
           <div className={styles.ContactText}>
             <h3>Consultas</h3>
-            <p>Info@gmail.com</p>
           </div>
         </div>
 
@@ -98,8 +101,8 @@ const Contact = ({ onLoadingChange }) => {
 
       <div className={styles.Conteiner_2}>
         <div className={styles.Formulario}>
-          <img src={SaltoLocal} alt='Salto Agro Local' className={styles.ImgSaltoLocal} />
-          <form action="https://formsubmit.co/goffifederico123@gmail.com" method="POST" className={styles.FormularioContacto}>
+          <div className={styles.ImgSaltoLocal}></div>
+          <form action="https://formsubmit.co/acaede1c50b68e8b6bc1a26f227d511e" method="POST" className={styles.FormularioContacto}>
             <ul className={styles.UlContacto}>
               <div className={styles.InfoContainer}>
                 <h3>CONTÁCTANOS:</h3>

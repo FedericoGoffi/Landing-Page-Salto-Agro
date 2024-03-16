@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Agronomy.module.css';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
-const Agronomy = ({ onLoadingChange }) => {
+const Agronomy = () => {
   const [loading, setLoading] = useState(true);
 
   const [showMoreForrajeras, setShowMoreForrajeras] = useState(false);

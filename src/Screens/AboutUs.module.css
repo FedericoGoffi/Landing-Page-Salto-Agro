@@ -30,6 +30,7 @@
   border: none;
   background-color: transparent;
   margin: 0px;
+  padding-top: 20px;
 }
 
 @media (max-width: 800px) and (min-width: 481px) {
