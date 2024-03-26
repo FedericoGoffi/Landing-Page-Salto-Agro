@@ -105,14 +105,14 @@
 
 .ImgSaltoLocal {
   background-image: url(../Img/SaltoLocal.webp);
-  width: 75em;
-  height: 35em;
+  width: 68em;
+  height: 30em;
   background-size: cover;
   background-position: center;
   background-color: #000;
   color: #000;
   display: block;
-  margin: 100px 120px 150px;
+  margin: 100px 65px 150px;
 }
 
 .InfoContainer {
@@ -333,7 +333,73 @@
   }
 }
 
-@media (max-width: 1023px) and (min-width: 700px) {
+@media (max-width: 1200px) and (min-width: 1024px) {
+
+  .ImgSaltoLocal {
+    width: 58em;
+    height: 27em;
+    margin: 100px 60px 185px;
+  }
+
+  .FormularioContacto {
+    top: 53%;
+    left: 29%;
+    width: auto;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 810px) {
+
+  .ImgSaltoLocal {
+    width: 47em;
+    height: 22em;
+    margin: 100px 30px 140px;
+  }
+
+  .FormularioContacto {
+    top: 54%;
+    left: 29%;
+    width:53%;
+    height: 80%;
+  }
+
+  .InfoIcon {
+    font-size: 1.5em;
+  }
+
+  .LabelC {
+    font-size: 1em;
+  }
+  
+  .InputNA,
+  .InputCA,
+  .TextAreaMensaje {
+    height: 25px;
+    width: 85%;
+    margin-bottom: 10px;
+  }
+
+  .DivNA {
+    display: flex;
+    width: 96%;
+    padding-left: 16px;
+  }
+  
+  .TextAreaMensaje {
+    height: 70px;
+    width: 330px;
+  }
+
+  .ButtonContacto {
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    font-size: .9em;
+  }
+}
+
+@media (max-width: 810px) and (min-width: 767px) {
   
   .H2Contact {
     height: 40em;
@@ -413,7 +479,7 @@
   }
 }
 
-@media (max-width: 699px) and (min-width: 481px) {
+@media (max-width: 766px) and (min-width: 481px) {
 
   .H2Contact {
     height: 38em;

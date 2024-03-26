@@ -19,7 +19,7 @@ const Footer = () => {
                     </div>
                     <div>
                         <h2>MAIL:</h2>
-                        <p>info@gmail.com</p>
+                        <p>panchocandioti<br/>@gmail.com</p>
                     </div>
                 </div>
                 <div className={styles.Staff}>

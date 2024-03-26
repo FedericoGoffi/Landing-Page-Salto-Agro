@@ -73,7 +73,7 @@ const NavBar = () => {
     },
     {
       id: 3,
-      link: 'CONTÁCTANOS',
+      link: 'CONTACTOS',
       url: '/Contactos',
       external: false,
     },
